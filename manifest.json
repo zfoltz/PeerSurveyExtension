@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Survey Counter Extension",
+  "version": "1.0",
+  "description": "Displays the total number of surveys",
+  "host_permissions": [
+    "http://peersurvey.cc.gatech.edu/"
+  ],
+  "permissions": [
+    "activeTab",
+    "storage",
+    "cookies"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://peersurvey.cc.gatech.edu/platform/dashboard.html"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+
+}
