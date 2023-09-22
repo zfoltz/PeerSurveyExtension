@@ -10,7 +10,7 @@ The Survey Difficulty Organizer Chrome Extension is a handy tool that displays t
 
 ### With Extension
 
-![Screenshot with Extension](images/extensionOnScreenshot.png)
+![Screenshot with Extension](images/extensionOnScreenShot.png)
 
 
 ## Table of Contents
