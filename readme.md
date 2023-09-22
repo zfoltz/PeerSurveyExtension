@@ -1,10 +1,17 @@
-# Survey Counter Chrome Extension
+# Survey Difficulty Organizer Chrome Extension
 
 ## Overview
 
-The Survey Counter Chrome Extension is a handy tool that displays the total number of surveys available on a specific webpage. It works by fetching data from an API endpoint and counting the surveys in the response payload.
+The Survey Difficulty Organizer Chrome Extension is a handy tool that displays the difficulty of surveys available on the gatech peersurvey website. It works by fetching data from the API endpoint and counting the number of required questions and type in each survey in the list of open surveys. The "open surveys" page is then sorted easiest to hardest, or you can think of this as length of time required to complete the survey lowest time required to highest. This information is then locally cached for speed.
 
-![Extension Icon](images/icon128.png)
+### Without Extension
+
+![Screenshot without Extension](images/extensionOffScreenshot.png)
+
+### With Extension
+
+![Screenshot with Extension](images/extensionOnScreenshot.png)
+
 
 ## Table of Contents
 
