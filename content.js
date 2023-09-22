@@ -30,9 +30,15 @@ function calculateDifficulty(surveyQuestions) {
         totalPoints += 2;
       } else if (question.type == "radio") {
         totalPoints += 1;
+      } else if (question.type == "likert_frequency") {
+        totalPoints += 1;
+      } else if (question.type == "likert_agreement") {
+        totalPoints += 1;
+      } else if (question.type == "agegroup_basic") {
+        totalPoints += 1;
       }
-      }
-    });
+    }
+  });
     return totalPoints;
 }
 
@@ -83,7 +89,7 @@ async function fetchSurveyDifficulty(token, surveyId) {
 async function addDifficultyScoresToTable(token, openSurveys) {
   try {
     // Retrieve the list of survey IDs from your data (replace with your data)
-    const surveyIds = openSurveys.slice(0,10).map(obj => obj.id);
+    const surveyIds = openSurveys.map(obj => obj.id);
 
     // Use Promise.all to parallelize the requests
     const difficultyScores = await Promise.all(
