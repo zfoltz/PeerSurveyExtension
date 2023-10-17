@@ -23,12 +23,12 @@ The Survey Difficulty Organizer Chrome Extension is a handy tool that displays t
 
 ## Getting Started
 
-To use the Survey Counter Chrome Extension, follow these steps:
+To use the PeerSurveyExtension Chrome Extension, follow these steps:
 
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/survey-counter-extension.git
+   git clone https://github.com/zfoltz/PeerSurveyExtension.git
 2. Open Google Chrome and navigate to chrome://extensions/.
 
 3. Enable "Developer mode" in the top right corner of the extensions page.
@@ -37,20 +37,24 @@ To use the Survey Counter Chrome Extension, follow these steps:
 
 5. The extension icon Extension Icon should now appear in your Chrome toolbar.
 
-6. Navigate to the webpage where surveys are available, and click the extension icon to see the total number of surveys displayed.
+6. Navigate to the webpage where surveys are available, and it will automatically sort the surveys.
 
 ## How It Works
 The extension works by:
 
-1. Accessing a specific webpage where surveys are available.
+1. Waiting until you navigate to peersurvey.gatech.edu.
 
-2. Intercepting the API request made by the webpage to retrieve survey data.
+2. Grabing the cookies from the peersurvey website.
 
-3. Counting the number of surveys in the API response payload.
+3. Making an API request to get a list of the open surveys.
 
-4. Displaying the total survey count in a popup when the extension icon is clicked.
+4. Making an API request to get the survey question data for each open survey.
+   
+6. Scoring the difficulty or time to complete of each survey
 
-Please note that the exact structure of the API response may vary depending on the webpage. The extension is designed to work with a specific API endpoint (e.g., http://peersurvey.cc.gatech.edu/api/v1/dashboard), so it will not work on other websites without modifications.
+7. Sorting the main page "dashboard" from easiest to hardest and showing the calculated difficulty.
+
+Please note that the extension is designed to work with a specific API endpoint (e.g., http://peersurvey.cc.gatech.edu/api/v1/dashboard), so it will not work on other websites without modifications.
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
